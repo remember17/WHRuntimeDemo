@@ -40,7 +40,7 @@ Demo中有一个NSObject+WHRuntime.h分类，包含与runtime有关的方法，�
 ```
 
 ### runtime相关知识点
-请看这篇文章：[runtime运行时相关知识](http://www.jianshu.com/u/3104fe86dfee)
+请看这篇文章：[runtime运行时相关知识](http://www.jianshu.com/p/d6a68575ce10)
 ```
     runtime：Objective-C是动态语言，它将很多静态语言在编译和链接时做的事放到了运行时，这个运行时系统就是runtime。
     runtime其实就是一个库，它基本上是用C和汇编写的一套API，这个库使C语言有了面向对象的能力。
