@@ -106,11 +106,11 @@
      * 添加的方法在TestRuntime类的resolveInstanceMethod中
      */
     
-    // 1.如果方法名是wh_addMethod，就添加一个MethodOne方法来执行
+    // 如果方法名是wh_addMethod，就添加一个MethodOne方法来执行
     TestRuntime *test1 = [[TestRuntime alloc] init];
     [test1 performSelector:@selector(wh_addMethod)];
     
-    // 2.如果找不到方法，就添加一个addMethod来执行
+    // 如果找不到方法，就添加一个addMethod来执行
     id test2 = [[TestRuntime alloc] init];
     [test2 length];
 }

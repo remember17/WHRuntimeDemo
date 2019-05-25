@@ -21,11 +21,11 @@
     NSInteger _variableB;
 }
 
-+(void)classMethod {
++ (void)classMethod {
     
 }
 
--(void)publicMethod {
+- (void)publicMethod {
     
 }
 
@@ -37,13 +37,13 @@
 /** 消息转发 没有找到SEL时会执行 */
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     
-    // 1. 如果方法名是wh_addMethod，就添加一个MethodOne方法来执行
+    // 如果方法名是wh_addMethod，就添加一个MethodOne方法来执行
     if (sel == NSSelectorFromString(@"wh_addMethod")) {
         class_addMethod(self, sel, (IMP)MethodOne, "v@:");
         return YES;
     }
     
-    // 2. 如果找不到方法，就添加一个addMethod来执行
+    // 如果找不到方法，就添加一个addMethod来执行
     [self addMethodWithSEL:sel methodIMP:@selector(addMethod)];
     return YES;
 }
